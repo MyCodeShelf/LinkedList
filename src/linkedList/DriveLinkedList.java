@@ -27,12 +27,22 @@ public class DriveLinkedList {
         */
        System.out.println("Double Linked List start");
        DoubleLinkedList db=new DoubleLinkedList();
-       db.root=new Node(4);
-       db.insert(db.root, 5);
-       db.insert(db.root, 6);
-       db.printList(db.root);
-       
-        
+       db.head=new Node(4);
+       db.insert(db.head, 5);
+       db.insert(db.head, 6);
+       db.printList(db.head);
+       System.out.println("Insertion in front");
+       db.insertAtStart(3);
+       db.printList(db.head);
+        System.out.println("Insertion At Rear:");
+        db.insertAtEnd(7);
+        db.printList(db.head);
+        db.insertAfter(db.head.next, 1234567);
+        db.printList(db.head);
+        db.printMiddleNode(db.head);
+        System.out.println("Deletion in progress");
+        db.deleteNode(db.head.next.next);
+        db.printList(db.head);
         
 	}
 

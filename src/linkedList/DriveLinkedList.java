@@ -43,6 +43,10 @@ public class DriveLinkedList {
         System.out.println("Deletion in progress");
         db.deleteNode(db.head.next.next);
         db.printList(db.head);
+        System.out.println("Reversal in progress ");
+        db.reverseDoublyLinkedList(db.head);
+        db.printList(db.head);
+        db.printNthLast(2);
         
 	}
 

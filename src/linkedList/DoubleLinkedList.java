@@ -76,9 +76,40 @@ public void deleteNode(Node head)
 	head.prev.next=head.next;
 	head.next.prev=head.prev;
 }
-public void reverseDoublyLinkedList(Node head)
+public void reverseDoublyLinkedList(Node node)
 {
+	Node temp = null; 
+	Node current=node;
 	
+			while(current!=null)
+			{
+				 temp=current.prev;
+				current.prev=current.next;
+				current.next=temp;
+				current=current.prev;
+				
+			}
+			if(temp!=null)
+				head=temp.prev;
+			
+		
+}
+//to print nth element from last
+public void printNthLast(int fromlast,Node node)
+{
+	Node last=node;
+	int count=1;
+	while(last.next!=null)
+	{
+		last=last.next;
+	}
+	
+	while(last.prev!=null && count!=fromlast)
+	{
+		last=last.prev;
+		count=count+1;
+	}
+	System.out.println(fromlast +"th node from last is " +last.data);
 }
 public void printList(Node head)
 {

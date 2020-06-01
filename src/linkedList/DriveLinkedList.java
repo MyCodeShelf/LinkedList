@@ -46,7 +46,7 @@ public class DriveLinkedList {
         System.out.println("Reversal in progress ");
         db.reverseDoublyLinkedList(db.head);
         db.printList(db.head);
-        db.printNthLast(2);
+        db.printNthLast(2, db.head);
         
 	}
 

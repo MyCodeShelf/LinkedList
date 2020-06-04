@@ -25,6 +25,8 @@ public class DriveLinkedList {
         System.out.println("Without creating third list");
         //if we do not want to bring in 3rd linked list
         */
+		
+		/*  For Doubly Linked List
        System.out.println("Double Linked List start");
        DoubleLinkedList db=new DoubleLinkedList();
        db.head=new Node(4);
@@ -47,7 +49,16 @@ public class DriveLinkedList {
         db.reverseDoublyLinkedList(db.head);
         db.printList(db.head);
         db.printNthLast(2, db.head);
-        
+        */
+		//circular linked list
+		CircularLinkedList clr=new CircularLinkedList();
+		clr.addToEmpty(4);
+		clr.addAtEnd(5);
+		clr.addAfter(5, 6);
+		clr.traverse();
+	System.out.println(clr.last.next.data + " is a node");
+	clr.deleteNode(clr.last.next.next); //should delete 4
+	clr.traverse();
 	}
 
 }

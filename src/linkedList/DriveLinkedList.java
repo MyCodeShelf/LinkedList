@@ -59,6 +59,10 @@ public class DriveLinkedList {
 	System.out.println(clr.last.next.data + " is a node");
 	clr.deleteNode(clr.last.next.next); //should delete 4
 	clr.traverse();
+	clr.reverse();
+	clr.traverse();
+	clr.noOfNodes();
+	clr.splitIntoTwo();
 	}
 
 }

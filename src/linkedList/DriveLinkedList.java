@@ -63,6 +63,13 @@ public class DriveLinkedList {
 	clr.traverse();
 	clr.noOfNodes();
 	clr.splitIntoTwo();
+	System.out.println(" Doubly Circular Linked List :");
+	CircularDoublyLinkedList cdl=new CircularDoublyLinkedList();
+	cdl.addNodeAtBeginning(3);
+	cdl.addNodeAtBeginning(7);
+	cdl.traverse();
+	cdl.addAtLast(2);
+	cdl.traverse();
 	}
 
 }

@@ -30,8 +30,17 @@ public Node addNodeAtBeginning(int data)
 public Node addAtLast(int value)
 {
 	if(head==null)
-	addNodeAtBeginning(value);
-	else
+	return addNodeAtBeginning(value);
+	else if(head.next==head)
+	{
+		Node second=new Node(value);
+		head.next=second;
+		second.prev=head;
+		second.next=head;
+		head.prev=second;
+		return second;
+	}
+	else 
 	{
 		Node last=head;
 		while(last.next!=head)
@@ -46,7 +55,42 @@ public Node addAtLast(int value)
 		return last;
 				
 	}
-	return head;
+	
+}
+public void addedAfterValue(int value , int newData)
+{
+	if(head==null)
+	{
+		System.out.println("empty list");
+		return;
+	}
+	else if(head.next==head)
+	{
+		if(head.data==value)
+		{
+		head.next=new Node(newData);
+		head.next.prev=head;
+		head.next.next=head;
+		head.prev=head.next;
+		return;
+		}
+	}
+	else
+	{
+		while(head.next!=head)
+		{
+			if(head.data==value)
+			{
+				Node newAdd=new Node(newData);
+				newAdd.next=head.next;
+				head.next.prev=newAdd;
+				newAdd.prev=head;
+				head.next=newAdd;
+				return;
+			}
+			head=head.next;
+		}
+	}
 }
 public void traverse()
 {

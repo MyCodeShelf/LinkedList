@@ -70,6 +70,9 @@ public class DriveLinkedList {
 	cdl.traverse();
 	cdl.addAtLast(2);
 	cdl.traverse();
+	cdl.addedAfterValue(7, 8);
+	System.out.println("Computation in progress");
+	cdl.traverse();
 	}
 
 }

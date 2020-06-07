@@ -73,6 +73,22 @@ public class DriveLinkedList {
 	cdl.addedAfterValue(7, 8);
 	System.out.println("Computation in progress");
 	cdl.traverse();
+	System.out.println("Reverse in progress");
+	cdl.reverse();
+	cdl.traverse();
+	System.out.println("deletion in progress");
+	cdl.deleteAtStart();
+	cdl.traverse();
+	System.out.println("Deletion at end started");
+	cdl.deleteAtEnd();
+	cdl.traverse();
+	cdl.deleteAValue(3);
+	cdl.traverse();
+	cdl.addAtLast(9);
+	cdl.traverse();
+	cdl.splitIntoTwo();
+	
+	
 	}
 
 }

@@ -3,6 +3,20 @@ package linkedList;
 public class DriveLinkedList {
 
 	public static void main(String[] args) {
+		LinkedList list=new LinkedList();
+		list.addAtStart(3);
+		list.addAtLast(5);
+		list.AddAfterValue(5, 6);
+		list.printlist();
+	//	list.deleteAtBeginning();
+	//	list.deleteAtEnd();
+	//	list.deleteAtEnd();
+	//	list.deleteAtEnd();
+		//list.deleteAvalue(3);
+		list.reverseList();
+		list.printlist();
+		list.splitIntoTWO();
+		
 		/*
 		// TODO Auto-generated method stub
         LinkedList obj1=new LinkedList();
@@ -51,6 +65,7 @@ public class DriveLinkedList {
         db.printNthLast(2, db.head);
         */
 		//circular linked list
+		/*
 		CircularLinkedList clr=new CircularLinkedList();
 		clr.addToEmpty(4);
 		clr.addAtEnd(5);
@@ -87,7 +102,7 @@ public class DriveLinkedList {
 	cdl.addAtLast(9);
 	cdl.traverse();
 	cdl.splitIntoTwo();
-	
+	*/
 	
 	}
 
